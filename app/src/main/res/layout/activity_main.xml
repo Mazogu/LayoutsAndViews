@@ -22,13 +22,13 @@
             android:id="@+id/firstText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="First TextView" />
+            android:text="@string/first_textview" />
 
         <TextView
             android:id="@+id/secondText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Second TextView" />
+            android:text="@string/second_textview" />
 
     </LinearLayout>
 
@@ -40,31 +40,39 @@
             android:id="@+id/btnSomething"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Do Something" />
+            android:text="@string/do_something" />
 
         <Button
             android:id="@+id/btnElse"
-            android:onClick="onDoSomethingElse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/btnSomething"
             android:layout_toEndOf="@id/btnSomething"
             android:layout_toRightOf="@id/btnSomething"
-            android:text="Do Something Else" />
+            android:onClick="onDoSomethingElse"
+            android:text="@string/do_something_else" />
     </RelativeLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/defaultFrameHeight">
+
         <ImageView
-            android:src="@mipmap/ic_launcher"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="fitXY"/>
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher" />
+
         <TextView
-            android:layout_gravity="center"
-            android:text="Some Text"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/some_text" />
     </FrameLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/show_web_view"
+        android:onClick="onShowWebView"/>
 </LinearLayout>

@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">ViewsAndLayouts</string>
+    <string name="some_text">Some Text</string>
+    <string name="do_something_else">Do Something Else</string>
+    <string name="do_something">Do Something</string>
+    <string name="second_textview">Second TextView</string>
+    <string name="first_textview">First TextView</string>
+    <string name="show_web_view">Show Web View</string>
 </resources>

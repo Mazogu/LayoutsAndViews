@@ -1,5 +1,6 @@
 package com.example.micha.viewsandlayouts;
 
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
@@ -50,5 +51,12 @@ public class MainActivity extends AppCompatActivity {
     public void onDoSomethingElse(View view) {
         Log.d(TAG, "onDoSomethingElse");
         secondText.setTextColor(getColor(R.color.colorPrimaryDark));
+    }
+
+    public void onShowWebView(View view) {
+
+        Intent intent = new Intent(getApplicationContext(), WebViewActivity.class);
+        startActivity(intent);
+
     }
 }
