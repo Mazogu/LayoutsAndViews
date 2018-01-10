@@ -1,14 +1,20 @@
 package com.example.micha.viewsandlayouts;
 
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.io.Console;
+
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
     private TextView firstText;
     private TextView secondText;
     private Button doBtn;
@@ -27,13 +33,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String data = edit.getText().toString();
                 firstText.setText(data);
-            }
-        });
-
-        elseBthn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
+                Log.d(TAG, "onClick: ");
             }
         });
     }
@@ -44,5 +44,11 @@ public class MainActivity extends AppCompatActivity {
         doBtn = findViewById(R.id.btnSomething);
         elseBthn = findViewById(R.id.btnElse);
         edit = findViewById(R.id.edit);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void onDoSomethingElse(View view) {
+        Log.d(TAG, "onDoSomethingElse");
+        secondText.setTextColor(getColor(R.color.colorPrimaryDark));
     }
 }
